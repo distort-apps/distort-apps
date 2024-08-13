@@ -9,6 +9,7 @@ interface ProjectDetailParams {
     slug: string;
   };
 }
+
 const isVideo = (media: string): boolean => {
   const videoIndicators = ["video", ".mp4", ".webm", ".ogg"];
   return videoIndicators.some((indicator) => media.includes(indicator));
