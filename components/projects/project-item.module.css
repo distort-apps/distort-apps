@@ -40,6 +40,7 @@
 
 .post a {
   color: var(--color-grey-100);
+  list-style: none;
 }
 
 .post h1 {
