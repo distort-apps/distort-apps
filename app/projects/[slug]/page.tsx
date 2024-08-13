@@ -1,4 +1,4 @@
-// import { getProject } from "@/lib/projects";
+import { getProject } from "@/lib/projects";
 import classes from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -9,7 +9,6 @@ interface ProjectDetailParams {
     slug: string;
   };
 }
-
 const isVideo = (media: string): boolean => {
   const videoIndicators = ["video", ".mp4", ".webm", ".ogg"];
   return videoIndicators.some((indicator) => media.includes(indicator));
@@ -17,24 +16,24 @@ const isVideo = (media: string): boolean => {
 
 export default async function ProjectDetailPage({ params }: ProjectDetailParams) {
   
-//   const project = await getProject(params.slug);
-//   const mediaIsVideo = isVideo(project.media[1]);
-//   const humanReadableDate = new Date(project.date).toLocaleDateString('en-US', {
-//     month: 'long',
-//     day: 'numeric',
-//     year: 'numeric'
-//   })
-//   if (!project) {
-//     notFound();
-//   }
+  const project = await getProject(params.slug);
+  const mediaIsVideo = isVideo(project.media[1]);
+  const humanReadableDate = new Date(project.date).toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  })
+  if (!project) {
+    notFound();
+  }
   
-//   project.body = project.body.replace(/\n/g,'<br />')
+  project.body = project.body.replace(/\n/g,'<br />')
 
 
   return (
     <>
       <header className={classes.header}>
-        {/* <div className={classes.headerText}>
+        <div className={classes.headerText}>
         <h1>{project.title}</h1>
       <div className={classes.image}>
           {mediaIsVideo ? (
@@ -53,7 +52,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
             __html: project.body,
           }}
         ></p>
-      </main> */}
+      </main>
       </header>
     </>
   );
