@@ -32,7 +32,7 @@
     ".next/types/**/*.ts",
     "types/**/*.d.ts",
     "global.d.ts"
-  ],
+, "app/sitemap.tsx"  ],
   "exclude": [
     "node_modules"
   ]
