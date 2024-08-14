@@ -23,13 +23,5 @@
     padding: 1rem; 
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
-  .project {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); 
-    gap: 1rem; 
-    padding: 1rem; 
-  }
-}
+
+
