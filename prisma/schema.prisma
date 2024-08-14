@@ -15,7 +15,8 @@ model Project {
   title     String
   summary   String
   info      String
-  body      String
+  link      String
+  repo      String
   media     String[]
   date      DateTime
 }
