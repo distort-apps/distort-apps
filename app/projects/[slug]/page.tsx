@@ -10,7 +10,7 @@ interface ProjectDetailParams {
   };
 }
 const isVideo = (media: string): boolean => {
-  const videoIndicators = ["video", ".mp4", ".webm", ".ogg"];
+  const videoIndicators = ["video", ".mp4", ".webm", ".ogg", ".mov"];
   return videoIndicators.some((indicator) => media.includes(indicator));
 };
 
@@ -27,7 +27,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
     notFound();
   }
   
-  project.body = project.body.replace(/\n/g,'<br />')
+  project.info = project.info.replace(/\n/g,'<br />')
 
 
   return (
@@ -42,14 +42,13 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
               <Image src={project.media[1]} alt={project.slug} fill />
               )}
         </div>
-          <p>{project.body}</p>
-          <p>{humanReadableDate}</p>
+          <p>{project.info}</p>
         </div>
         <main>
         <p
           className={classes.instructions}
           dangerouslySetInnerHTML={{
-            __html: project.body,
+            __html: project.info,
           }}
         ></p>
       </main>

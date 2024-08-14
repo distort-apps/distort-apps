@@ -4,7 +4,8 @@ export interface Project {
     title: string;
     summary: string;
     info: string;
-    body: string;
+    link: string;
+    repo: string;
     media: string[];
     date: Date;
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Video from "@/components/video/video";
 
 const isVideo = (media: string): boolean => {
-  const videoIndicators = ["video", ".mp4", ".webm", ".ogg"];
+  const videoIndicators = ["video", ".mp4", ".webm", ".ogg", ".mov"];
   return videoIndicators.some((indicator) => media.includes(indicator));
 };
 
