@@ -52,7 +52,7 @@ export default async function ProjectDetailPage({
         </div>
         <main>
           <p
-            className={classes.instructions}
+            className={classes.description}
             dangerouslySetInnerHTML={{
               __html: project.info,
             }}
