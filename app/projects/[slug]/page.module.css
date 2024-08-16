@@ -57,7 +57,12 @@
   }
 }
 
+.description {
+  font-size: 0.75rem;
+  padding: 1rem;
+  max-width: 60rem;
 
+}
 
 .description ul {
   list-style: none;
@@ -102,7 +107,7 @@ opacity: 50%;
 
 .description p {
   margin: 0;
-  line-height: 1.3;
+  font-size: 0.75rem;
 }
 
 .description em, 
