@@ -10,7 +10,6 @@ const isVideo = (media: string): boolean => {
 
 export default function ProjectItem({ slug, title, media, summary }: Project) {
   const mediaIsVideo = isVideo(media[0]);
-  console.log(media[0]);
   return (
     <div className={classes.container}>
       <li className={classes.post}>
