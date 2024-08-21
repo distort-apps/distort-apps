@@ -42,13 +42,25 @@ export default async function ProjectDetailPage({
           </div>
         </Link>
         <div className={classes.info}>
-          <Link href={`${project.link}`} className='' >
-          <p className={project.title == "STARFLEET" ? classes.title : undefined}>{project.title}</p>
-          {project.title == "STARFLEET" ? <p>play here</p> : <p>go to {project.title}</p>}
+          <Link href={`${project.link}`} className=''>
+            <p
+              className={
+                project.title == "STARFLEET" ? classes.title : undefined
+              }
+            >
+              {project.title}
+            </p>
+            {project.title == "STARFLEET" ? (
+              <p>play here</p>
+            ) : (
+              <p>go to {project.title}</p>
+            )}
           </Link>
-          <Link href={`${project.repo}`} className=''> 
-          <p>visit the repo</p>
-          </Link>
+          {project.repo.length !== 0 && (
+            <Link href={`${project.repo}`} className=''>
+              <p>visit the repo</p>
+            </Link>
+          )}
         </div>
         <main>
           <p
